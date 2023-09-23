@@ -1,0 +1,210 @@
+/* Import the Montserrat and Fira Code fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Define global variables. */
+:root {
+    /* Define the global color palette. */
+    --accent-color: #2ac3de;
+    --accent-color-alt: #ff0050;
+    --text-color-dark: #222222;
+    --text-color-light: #f8f8f2;
+    --section-color-dark: #00000080;
+    --section-color-light: #ffffffcc;
+    --background-color: #1a1b26;
+
+    /* Define the global spacing. */
+    --common-spacing: 10%;
+}
+
+/* Enable smooth scrolling.*/
+html {
+	scroll-behavior: smooth;
+}
+
+/* Define global tag and class styles. */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5rem;
+    color: var(--text-color-light);
+    margin: 0;
+    margin-top: 7rem;
+    padding: 0;
+    background: var(--background-color);
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 1.5rem 0;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--accent-color-alt);
+}
+
+a:hover {
+    color: var(--accent-color-alt);
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 5px 0 5px 15px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    color: var(--text-color-light);
+}
+
+nav ul li a:visited {
+    color: var(--accent-color);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color-alt);
+}
+
+table {
+    width: 100%;
+    border-radius: 10px;
+}
+
+table, th, td {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) { 
+    background: #515c7e40;
+}
+
+tr:nth-child(even) { 
+    background: #1111174a;
+}
+
+tr:hover { 
+    background: #515c7e60;
+    cursor: pointer;
+}
+
+th {
+    background-color: #363b54;
+}
+
+th, td {
+    padding: 10px;
+}
+
+button, .button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    color: var(--text-color-light) !important;
+    border-radius: 10px;
+    background-color: #363b54;
+}
+
+button:hover, .button:hover {
+    color: var(--text-color-light);
+    background-color: #737aa2;
+    cursor: pointer;
+}
+
+.highlight {
+    color: var(--text-color-light);
+    background-color: #737aa2;
+}
+
+code {    line-height: 0px;
+    font-family: 'Fira Code', monospace;
+}
+
+.container {
+    padding: 2rem var(--common-spacing);
+    gap: 2rem;
+}
+
+.cardtainer {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 100px;
+    max-height: 300px;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #363b54;
+}
+
+.wrapper {
+    padding: 2rem 0;
+}
+
+#header {
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 5px 10%;
+    background: #16161e;
+}
+
+#logo {
+    width: auto;
+    height: 3rem;
+}
+
+#dataset {
+    text-align: center;
+    background-color: var(--section-color-dark);
+}
+
+#dataset .wrapper {
+    overflow-x: auto;
+}
+
+#about {
+    color: var(--text-color-dark);
+    background-color: var(--section-color-light);
+}
+
+#footer {
+    font-size: 14px;
+    text-align: center;
+}
+
+#page-title, #page-views {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+/* Disable motion if preferred in supported browsers. */
+@media (prefers-reduced-motion) {
+	html {
+		scroll-behavior: auto;
+	}
+}

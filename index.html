@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StatisTik</title>
+    <link rel="icon" type="image/x-icon" href="/img/statistik-favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<body>
+    <!-- Header -->
+    <header id="header" class="container">
+        <a href="index.html" title="StatisTik"><img id="logo" src="img/statistik-darkmode.svg" alt="StatisTik" width="100"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="clients.html">Clients</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Content -->
+    <section id="content" class="container">
+        <h1>Dashboard</h1>
+        <p>Welcome to StatisTik, a work-in-progress streaming analytics aggregator for TikTok and YouTube.</p>
+        <div class="cardtainer">
+            <div class="card">
+                <canvas id="barChart"></canvas>
+            </div>
+            <div class="card">
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        Chart.defaults.borderColor = '#515c7e60';
+        Chart.defaults.color = '#ffffff';
+
+        const ctx1 = document.getElementById('barChart');
+      
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'March', 'April', 'May', 'June'],
+                datasets: [{
+                    label: 'Total Views',
+                    data: [1200, 1900, 900, 1157, 576, 1850],
+                    backgroundColor: '#2ac3de',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                    beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('pieChart');
+        
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'Red',
+                    'Blue',
+                    'Yellow'
+                ],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [300, 50, 100],
+                    backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                    ],
+                    hoverOffset: 4
+                }]
+            }
+        });
+
+      </script>
+    
+</body>
+</html>
