@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StatisTik</title>
+    <title>StatisTik | Dashboard</title>
     <link rel="icon" type="image/x-icon" href="/img/statistik-favicon.png">
+    <link rel="stylesheet" href="css/font-awesome.all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/scripts.js" defer></script>
 <body>
     <!-- Header -->
     <header id="header" class="container">
-        <a href="index.html" title="StatisTik"><img id="logo" src="img/statistik-darkmode.svg" alt="StatisTik" width="100"></a>
+        <a href="index.html" title="StatisTik"><img id="logo" src="img/statistik-darkmode.svg" alt="StatisTik"></a>
         <nav>
             <ul>
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="clients.html">Clients</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Clients</a></li>
             </ul>
         </nav>
+        <a class="toggle" href="#"><i class="fas fa-bars"></i></a>
     </header>
 
     <!-- Content -->
     <section id="content" class="container">
         <h1>Dashboard</h1>
-        <p>Welcome to StatisTik, a work-in-progress streaming analytics aggregator for TikTok and YouTube.</p>
+        <p>Welcome to StatisTik, a work in progress streaming analytics aggregator.</p>
         <div class="cardtainer">
             <div class="card">
                 <canvas id="barChart"></canvas>

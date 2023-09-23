@@ -6,10 +6,8 @@
     /* Define the global color palette. */
     --accent-color: #2ac3de;
     --accent-color-alt: #ff0050;
-    --text-color-dark: #222222;
-    --text-color-light: #f8f8f2;
+    --text-color: #f8f8f2;
     --section-color-dark: #00000080;
-    --section-color-light: #ffffffcc;
     --background-color: #1a1b26;
 
     /* Define the global spacing. */
@@ -26,16 +24,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.5rem;
-    color: var(--text-color-light);
+    color: var(--text-color);
     margin: 0;
-    margin-top: 7rem;
     padding: 0;
     background: var(--background-color);
 }
 
 h1 {
     font-size: 4rem;
-    margin: 1.5rem 0;
 }
 
 h2 {
@@ -51,29 +47,7 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-    color: var(--accent-color-alt);
-}
-
 a:hover {
-    color: var(--accent-color-alt);
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 5px 0 5px 15px;
-}
-
-nav ul li a {
-    text-transform: uppercase;
-    color: var(--text-color-light);
-}
-
-nav ul li a:visited {
-    color: var(--accent-color);
-}
-
-nav ul li a:hover {
     color: var(--accent-color-alt);
 }
 
@@ -112,27 +86,30 @@ button, .button {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     padding: 10px;
-    color: var(--text-color-light) !important;
+    color: var(--text-color) !important;
     border-radius: 10px;
     background-color: #363b54;
 }
 
 button:hover, .button:hover {
-    color: var(--text-color-light);
+    color: var(--text-color);
     background-color: #737aa2;
     cursor: pointer;
 }
 
 .highlight {
-    color: var(--text-color-light);
+    color: var(--text-color);
     background-color: #737aa2;
 }
 
-code {    line-height: 0px;
+code {
+    line-height: 0px;
     font-family: 'Fira Code', monospace;
 }
 
 .container {
+    display: flex;
+    flex-wrap: wrap;
     padding: 2rem var(--common-spacing);
     gap: 2rem;
 }
@@ -159,36 +136,47 @@ code {    line-height: 0px;
     padding: 2rem 0;
 }
 
+nav ul li {
+    display: inline-block;
+    margin: 15px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+}
+
+nav ul li a:visited {
+    color: var(--accent-color);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color-alt);
+}
+
+/* Tablet menu */
+@media all and (min-width: 700px) {
+
+}
+/* Desktop menu */
+@media all and (min-width: 960px) {
+    .toggle {
+        display: none;
+    }
+}
+
 #header {
-    overflow: hidden;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
-    padding: 5px 10%;
-    background: #16161e;
+    padding: 0rem var(--common-spacing);
+    background-color: #16161e;
 }
 
 #logo {
-    width: auto;
-    height: 3rem;
-}
-
-#dataset {
-    text-align: center;
-    background-color: var(--section-color-dark);
-}
-
-#dataset .wrapper {
-    overflow-x: auto;
-}
-
-#about {
-    color: var(--text-color-dark);
-    background-color: var(--section-color-light);
+    max-width: 200px;
+    min-width: 100px;
+    width: 100%;
+    height: auto;
 }
 
 #footer {
