@@ -14,11 +14,6 @@
     --common-spacing: 10%;
 }
 
-/* Enable smooth scrolling.*/
-html {
-	scroll-behavior: smooth;
-}
-
 /* Define global tag and class styles. */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -54,7 +49,7 @@ a:hover {
 button, .button {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    padding: 10px;
+    padding: 0.5rem;
     color: var(--text-color);
     border-radius: 10px;
     border: none;
@@ -67,40 +62,32 @@ button, .button:hover {
     cursor: pointer;
 }
 
-.highlight {
+button.active, .button.active {
     color: var(--text-color);
     background-color: #737aa2;
-}
-
-code {
-    line-height: 0px;
-    font-family: 'Fira Code', monospace;
 }
 
 .container {
     padding: 2rem var(--common-spacing);
 }
 
-.cardtainer {
-    margin-top: 2rem;
+.card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1 1 100px;
-    max-height: 400px;
-    padding: 2rem;
+    padding: 0.5rem;
     border-radius: 10px;
     background-color: #363b54;
 }
 
-.wrapper {
-    padding: 2rem 0;
+.chart-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 nav ul {
@@ -176,6 +163,12 @@ i.fas {
         display: inline-block;
         padding: 0 1rem;
     }
+
+    .chart-container {
+        display: flex;
+        justify-content: center;
+        width: calc(50% - 2rem);
+    }
 }
 
 #nav-logo {
@@ -200,7 +193,7 @@ i.fas {
 .table-container {
     overflow: scroll;
     width: 100%;
-    padding: 2rem;
+    padding: 0.5rem;
     border-radius: 10px;
     background-color: #363b54;
   }
@@ -261,11 +254,4 @@ th button[data-dir="asc"]::after {
   
 th button[data-dir="desc"]::after {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='4 0,8 8,0 8' fill='%23ffffff'/%3E%3C/svg%3E");
-}
-
-/* Disable motion if preferred in supported browsers. */
-@media (prefers-reduced-motion) {
-	html {
-		scroll-behavior: auto;
-	}
 }
