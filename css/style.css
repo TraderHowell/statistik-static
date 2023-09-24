@@ -136,9 +136,15 @@ code {
     padding: 2rem 0;
 }
 
+nav ul {
+    padding-inline-start: 0;
+    background-color: #16161e;
+}
+
 nav ul li {
-    display: inline-block;
-    margin: 15px;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
 }
 
 nav ul li a {
@@ -153,26 +159,53 @@ nav ul li a:hover {
     color: var(--accent-color-alt);
 }
 
-/* Tablet menu */
-@media all and (min-width: 700px) {
-
+#nav-menu {
+    display: none;
+    order: 2;
+    flex-basis: 100%;
 }
-/* Desktop menu */
-@media all and (min-width: 960px) {
-    .toggle {
-        display: none;
-    }
+
+#nav-menu.active {
+    display: block;
+}
+
+#nav-toggle {
+    order: 1;
 }
 
 #header {
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem var(--common-spacing);
     background-color: #16161e;
 }
 
-#logo {
+/* Desktop menu */
+@media all and (min-width: 700px) {
+    #nav-logo {
+        order: 0;
+    }
+
+    #nav-menu {
+        display: block;
+        flex-basis: auto;
+        order: 1;
+    }
+
+    #nav-toggle {
+        display: none;
+    }
+
+    #header {
+        flex-wrap: nowrap;
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding: 0 1rem;
+    }
+}
+
+#nav-logo {
     max-width: 200px;
     min-width: 100px;
     width: 100%;
