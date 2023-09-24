@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StatisTik | Clients - List</title>
+    <title>StatisTik | Clients</title>
     <link rel="icon" type="image/x-icon" href="/img/statistik-favicon.png">
-    <link rel="stylesheet" href="css/font-awesome.all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/scripts.js" defer></script>
+    <link rel="stylesheet" href="css/font-awesome.all.min.css">
+    <script src="js/header.js" defer></script>
+    <script src="js/client-table.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -30,26 +31,20 @@
             <a href="clients.html" title="Overview" class="button highlight">List</a>
             <a href="clients-manage.html" title="Manage" class="button">Manage</a>
         </div>
-
         <div class="cardtainer">
-            <div class="card">
-                <table>
+            <div class="card table-container">
+                <table class="data-table">
+                    <thead>
                     <tr>
-                        <th>Client Name &#x25B2;</th>
-                        <th>Platforms</th>
+                        <th><button id="name">Client Name</button></th>
+                        <th><button id="platforms">Platforms</button></th>
                     </tr>
-                    <tr>
-                        <td><a href="client-a.html">Client A</a></td>
-                        <td>TikTok</td>
-                    </tr>
-                    <tr>
-                        <td><a href="client-b.html">Client B</a></td>
-                        <td>TikTok</td>
-                    </tr>
+                    </thead>
+                    <tbody id="table-content"></tbody>
                 </table>
             </div>
         </div>
     </section>
-    
+
 </body>
 </html>

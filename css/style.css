@@ -31,15 +31,15 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
-}
-
-h2 {
     font-size: 3rem;
 }
 
-h3 {
+h2 {
     font-size: 2rem;
+}
+
+h3 {
+    font-size: 1rem;
 }
 
 a {
@@ -51,47 +51,17 @@ a:hover {
     color: var(--accent-color-alt);
 }
 
-table {
-    width: 100%;
-    border-radius: 10px;
-}
-
-table, th, td {
-    text-align: left;
-    border-collapse: collapse;
-}
-
-tr:nth-child(odd) { 
-    background: #515c7e40;
-}
-
-tr:nth-child(even) { 
-    background: #1111174a;
-}
-
-tr:hover { 
-    background: #515c7e60;
-    cursor: pointer;
-}
-
-th {
-    background-color: #363b54;
-}
-
-th, td {
-    padding: 10px;
-}
-
 button, .button {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     padding: 10px;
-    color: var(--text-color) !important;
+    color: var(--text-color);
     border-radius: 10px;
+    border: none;
     background-color: #363b54;
 }
 
-button:hover, .button:hover {
+button, .button:hover {
     color: var(--text-color);
     background-color: #737aa2;
     cursor: pointer;
@@ -123,7 +93,7 @@ code {
     align-items: center;
     justify-content: center;
     flex: 1 1 100px;
-    max-height: 300px;
+    max-height: 400px;
     padding: 2rem;
     border-radius: 10px;
     background-color: #363b54;
@@ -168,6 +138,10 @@ nav ul li a:hover {
 
 #nav-toggle {
     order: 1;
+}
+
+i.fas {
+    font-size: 1.5rem;
 }
 
 #header {
@@ -220,6 +194,73 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
+}
+
+/* Tables */
+.table-container {
+    overflow: scroll;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #363b54;
+  }
+  
+table {
+    width: 100%;
+}
+
+table, th, td {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) { 
+    background: #515c7e40;
+}
+
+tr:nth-child(even) { 
+    background: #1111174a;
+}
+
+tr:hover { 
+    background: #515c7e60;
+    cursor: pointer;
+}
+
+th {
+    background-color: #363b54;
+}
+
+th, td {
+    padding: 10px;
+}
+  
+th button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font: inherit;
+    height: 100%;
+    margin: 0;
+    padding: 0 0.5rem 0 0;
+    min-width: max-content;
+    position: relative;
+    text-align: left;
+    width: 100%;
+}
+  
+th button::after {
+    position: absolute;
+    padding-left: 0.5rem;
+}
+  
+th button[data-dir="asc"]::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='0, 0 8,0 4,8 8' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+  
+th button[data-dir="desc"]::after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='4 0,8 8,0 8' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
 /* Disable motion if preferred in supported browsers. */

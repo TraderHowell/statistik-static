@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StatisTik | Client A - Streams</title>
     <link rel="icon" type="image/x-icon" href="/img/statistik-favicon.png">
-    <link rel="stylesheet" href="css/font-awesome.all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/scripts.js" defer></script>
+    <link rel="stylesheet" href="css/font-awesome.all.min.css">
+    <script src="js/header.js" defer></script>
+    <script src="js/stream-table.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -36,43 +37,19 @@
         </div>
 
         <div class="cardtainer">
-            <div class="card">
-                <table>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
                     <tr>
-                        <th>Date &#x25B2;</th>
-                        <th>Stream Name</th>
-                        <th>Platform</th>
-                        <th>Views</th>
-                        <th>Likes</th>
+                        <th><button id="date">Date</button></th>
+                        <th><button id="time">Time</button></th>
+                        <th><button id="name">Stream Name</button></th>
+                        <th><button id="platform">Platform</button></th>
+                        <th><button id="views">Views</button></th>
+                        <th><button id="likes">Likes</button></th>
                     </tr>
-                    <tr>
-                        <td>09/15/23</td>
-                        <td>Sample Stream 4</td>
-                        <td>TikTok</td>
-                        <td>12756</td>
-                        <td>537</td>
-                    </tr>
-                    <tr>
-                        <td>09/14/23</td>
-                        <td>Sample Stream 3</td>
-                        <td>TikTok</td>
-                        <td>11346</td>
-                        <td>223</td>
-                    </tr>
-                    <tr>
-                        <td>09/13/23</td>
-                        <td>Sample Stream 2</td>
-                        <td>TikTok</td>
-                        <td>9791</td>
-                        <td>213</td>
-                    </tr>
-                    <tr>
-                        <td>09/12/23</td>
-                        <td>Sample Stream 1</td>
-                        <td>TikTok</td>
-                        <td>9008</td>
-                        <td>101</td>
-                    </tr>
+                    </thead>
+                    <tbody id="table-content"></tbody>
                 </table>
             </div>
         </div>
