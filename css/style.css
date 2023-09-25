@@ -67,6 +67,11 @@ button.active, .button.active {
     background-color: #737aa2;
 }
 
+button.disabled, .button.disabled, button.disabled:hover, .button.disabled:hover {
+    color: #363b54;
+    background-color: #16161e;
+}
+
 .container {
     padding: 2rem var(--common-spacing);
 }
@@ -88,6 +93,13 @@ button.active, .button.active {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+.text-container {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: #363b54;
 }
 
 nav ul {
@@ -183,7 +195,7 @@ i.fas {
     text-align: center;
 }
 
-#page-title, #page-views {
+#page-title, #page-views, #page-options {
     display: flex;
     align-items: center;
     column-gap: 0.5rem;
