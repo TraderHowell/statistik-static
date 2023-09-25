@@ -5,56 +5,56 @@ const response = {
         "time": "6:00pm EST",
         "name": "Stream 7",
         "platform": "TikTok",
-        "views": "23476",
-        "likes": "16834"
+        "views": 23476,
+        "likes": 16834
         },
         {
         "date": "09/25/23",
         "time": "6:00pm EST",
         "name": "Stream 6",
         "platform": "TikTok",
-        "views": "10752",
-        "likes": "98743"
+        "views": 10752,
+        "likes": 98743
         },
         {
         "date": "09/24/23",
         "time": "6:00pm EST",
         "name": "Stream 5",
         "platform": "TikTok",
-        "views": "23138",
-        "likes": "20033"
+        "views": 23138,
+        "likes": 20033
         },
         {
         "date": "09/24/23",
         "time": "1:00pm EST",
         "name": "Stream 4",
         "platform": "YouTube",
-        "views": "1900",
-        "likes": "1143"
+        "views": 1900,
+        "likes": 1143
         },
         {
         "date": "09/23/23",
         "time": "6:00pm EST",
         "name": "Stream 3",
         "platform": "TikTok",
-        "views": "16865",
-        "likes": "9878"
+        "views": 16865,
+        "likes": 9878
         },
         {
         "date": "09/22/23",
         "time": "6:00pm EST",
         "name": "Stream 2",
         "platform": "TikTok",
-        "views": "14094",
-        "likes": "8078"
+        "views": 14094,
+        "likes": 8078
         },
         {
         "date": "09/21/23",
         "time": "6:00pm EST",
         "name": "Stream 1",
         "platform": "TikTok",
-        "views": "12856",
-        "likes": "11057"
+        "views": 12856,
+        "likes": 11057
         }
     ]
 }
